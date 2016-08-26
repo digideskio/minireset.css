@@ -1,0 +1,142 @@
+html {
+  background: #fff;
+  color: #444;
+  font-family: "Helvetica", "Arial", sans-serif;
+  -moz-font-smoothing: grayscale;
+  -webkit-font-smoothing: initial;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0 auto;
+  max-width: 520px;
+}
+
+header {
+  padding: 60px 20px 20px;
+  text-align: center;
+}
+
+header figure,
+header figure img {
+  display: block;
+  height: 160px;
+  width: 160px;
+}
+
+header figure {
+  margin: 0 auto 20px;
+}
+
+h1 {
+  color: #1a1917;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+a {
+  color: #fc0c18;
+  text-decoration: none;
+}
+
+strong {
+  color: #1a1917;
+}
+
+nav {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+pre {
+  background: #eee;
+  border-radius: 3px;
+  margin-top: 20px;
+  padding: 16px 20px;
+}
+
+.button {
+  border-radius: 5px;
+  display: inline-block;
+  height: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+  transition: background 29ms ease-out;
+  vertical-align: top;
+}
+
+.button strong {
+  color: #fff;
+  display: block;
+}
+
+.button em {
+  color: rgba(255,255,255,0.5);
+  display: block;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.button.is-primary {
+  background: #fc0c18;
+  color: #fff;
+  line-height: 16px;
+  padding-top: 15px;
+}
+
+.button.is-primary:hover {
+  background: #1a1917;
+}
+
+main p {
+  margin-bottom: 1em;
+}
+
+main a:hover,
+footer a:hover {
+  text-decoration: underline;
+}
+
+main ul {
+  list-style: disc outside;
+  margin-left: 1em;
+}
+
+main li + li {
+  margin-top: 0.5em;
+}
+
+main li strong {
+  display: block;
+}
+
+footer {
+  font-size: 12px;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.fork-me {
+  display: block;
+  height: 149px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 149px;
+}
+
+.fork-me img {
+  display: block;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 0 20px;
+  }
+
+  .fork-me {
+    position: absolute;
+  }
+}

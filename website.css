@@ -1,20 +1,28 @@
 html {
   background: #fff;
-  color: #444;
+  font-size: 18px;
+  color: hsl(0, 0%, 40%);
   font-family: "Helvetica", "Arial", sans-serif;
   -moz-font-smoothing: grayscale;
   -webkit-font-smoothing: initial;
 }
 
 body {
-  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 300;
   line-height: 1.4;
-  margin: 0 auto;
-  max-width: 520px;
+}
+
+header,
+nav,
+main {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 29rem;
 }
 
 header {
-  padding: 60px 20px 20px;
+  padding: 3rem 1rem 1rem;
   text-align: center;
 }
 
@@ -26,13 +34,13 @@ header figure img {
 }
 
 header figure {
-  margin: 0 auto 20px;
+  margin: 0 auto 1rem;
 }
 
 h1 {
-  color: #1a1917;
+  color: hsl(0, 0%, 20%);
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 a {
@@ -41,27 +49,26 @@ a {
 }
 
 strong {
-  color: #1a1917;
+  color: hsl(0, 0%, 20%);
+  font-weight: 600;
 }
 
 nav {
-  margin-bottom: 60px;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
 pre {
   background: #eee;
   border-radius: 3px;
-  margin-top: 20px;
-  padding: 16px 20px;
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
 }
 
 .button {
-  border-radius: 5px;
-  display: inline-block;
-  height: 60px;
-  padding-left: 30px;
-  padding-right: 30px;
+  display: block;
+  line-height: 1em;
+  padding: 1.6em 2em 1.5em;
   text-align: center;
   transition: background 29ms ease-out;
   vertical-align: top;
@@ -70,24 +77,24 @@ pre {
 .button strong {
   color: #fff;
   display: block;
+  font-size: 1.1em;
 }
 
 .button em {
   color: rgba(255,255,255,0.5);
   display: block;
-  font-size: 12px;
+  font-size: 0.8em;
   font-style: normal;
+  margin-top: 0.5em;
 }
 
 .button.is-primary {
   background: #fc0c18;
   color: #fff;
-  line-height: 16px;
-  padding-top: 15px;
 }
 
 .button.is-primary:hover {
-  background: #1a1917;
+  background: hsl(0, 0%, 20%);
 }
 
 main p {
@@ -105,17 +112,59 @@ main ul {
 }
 
 main li + li {
-  margin-top: 0.5em;
+  margin-top: 1em;
 }
 
 main li strong {
   display: block;
+  font-size: 1.1em;
+}
+
+main li strong em {
+  color: hsl(357, 98%, 62%);
+  font-style: normal;
+}
+
+main li strong em.preserves {
+  color: hsl(147, 98%, 42%);
+}
+
+main li strong em.sets {
+  color: hsl(207, 98%, 52%);
 }
 
 footer {
-  font-size: 12px;
-  padding: 60px 20px;
-  text-align: center;
+  color: hsl(0, 0%, 70%);
+  margin-top: 3rem;
+}
+
+footer a {
+  background: #eee;
+  color: hsl(0, 0%, 70%);
+  display: block;
+  padding: 1.8em 2em;
+  transition: background 29ms ease-out;
+}
+
+footer a:hover {
+  background: #ddd;
+  text-decoration: none;
+}
+
+footer a span {
+  display: block;
+  font-size: 0.8em;
+}
+
+footer a strong {
+  color: hsl(0, 0%, 50%);
+  display: block;
+  font-weight: normal;
+  transition: background 29ms ease-out;
+}
+
+footer a:hover strong {
+  color: hsl(0, 0%, 30%);
 }
 
 .fork-me {
@@ -131,12 +180,36 @@ footer {
   display: block;
 }
 
-@media (max-width: 700px) {
-  body {
-    padding: 0 20px;
+@media (max-width: 699px) {
+  main {
+    padding: 0 2rem;
   }
 
   .fork-me {
     position: absolute;
+  }
+
+  footer a + a {
+    border-top: 1px solid #ddd;
+  }
+}
+
+@media (min-width: 700px) {
+  header {
+    padding-top: 5em;
+  }
+
+  footer {
+    display: flex;
+    margin: 1rem;
+    margin-top: 5rem;
+  }
+
+  footer a {
+    flex-grow: 1;
+  }
+
+  footer a + a {
+    margin-left: 1rem;
   }
 }
